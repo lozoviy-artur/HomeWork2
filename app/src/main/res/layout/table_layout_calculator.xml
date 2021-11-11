@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center|bottom">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|left">
+
+        <Button
+            android:id="@+id/clear_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/clear"
+            />
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+        <Button
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/digit__1"
+            android:text="@string/digit_1"
+
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/digit_2"
+            android:text="@string/digit_2"
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/digit_3"
+            android:text="@string/digit_3"
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/multiply"
+            android:text="@string/multiply"
+
+            />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <Button
+
+            android:layout_margin="3dp"
+            android:id="@+id/digit_4"
+            android:text="@string/digit_4"
+
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/digit_5"
+            android:text="@string/digit_5"
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/digit_6"
+            android:text="@string/digit_6"
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/divide"
+            android:text="@string/divide"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/digit_7"
+            android:text="@string/digit_7"
+
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/digit_8"
+            android:text="@string/digit_8"
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/digit_9"
+            android:text="@string/digit_9"
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/plus"
+            android:text="@string/plus"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/point"
+            android:text="@string/point"
+
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/digit_0"
+            android:text="@string/digit_0"
+            />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/minus"
+            android:text="@string/minus"
+            />
+
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/equal"
+            android:text="@string/equal"
+            />
+    </TableRow>
+
+
+
+
+</TableLayout>
