@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+//connect
     private void initView() {
         // Получить пользовательские элементы по идентификатору
         mInputField = findViewById(R.id.calcField);
