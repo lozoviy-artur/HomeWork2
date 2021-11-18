@@ -10,7 +10,7 @@
     <string name="digit_7">7</string>
     <string name="digit_8">8</string>
     <string name="digit_9">9</string>
-    <string name="point">.</string>
+    <string name="comma">,</string>
     <string name="multiply">*</string>
     <string name="divide">%</string>
     <string name="plus">+</string>
