@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="digit_margin">3dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="buttonCorner">50sp</dimen>
+</resources>
