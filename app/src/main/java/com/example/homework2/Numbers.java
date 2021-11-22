@@ -19,7 +19,6 @@ public class Numbers {
     private int counterPoint;
     private int counterClear;
 
-
     public Numbers(){
         counter0 = 0;
         counter1 = 0;

@@ -2,6 +2,8 @@ package com.example.homework2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Button;
@@ -10,7 +12,7 @@ import android.view.View;
 import java.util.Locale;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CalculationData mCalculationData = new CalculationData();
     private Numbers mCounters;
@@ -18,40 +20,52 @@ public class MainActivity extends AppCompatActivity {
     private TextView mInputField;  // пользовательский элемент 1-го счетчика
     private TextView textCounter1;  // пользовательский элемент 2-го счетчика
 
-
+    private Button switchTheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mCounters = new Numbers();
-        initView();
+        switchTheme = (Button) findViewById(R.id.switchTheme);
+        switchTheme.setOnClickListener(this);
+        }
 
 
 
-    }
+
+
+
+
 //connect
     private void initView() {
         // Получить пользовательские элементы по идентификатору
         mInputField = findViewById(R.id.calcField);
     }
 
-    private void initButton2ClickListener() {
+/*    private void initButton2ClickListener() {
         Button button0 = findViewById(R.id.digit_0);
-        button0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mCounters.incrementCounter0();
-                setTextCounter(mInputField, mCounters.getCounter0());
-            }
-        });
+        button0.setOnClickListener(new View.OnClickListener() {*/
+            //@Override
+@Override
+public void onClick(View V) {
+    initView();
+    switch (V.getId()) {
+        case R.id.switchTheme:
+            Intent intent = new Intent(this, ThemeActivity.class);
+            startActivity(intent);
+            break;
+        default:
+            break;
     }
+}
+/*        });
+    }*/
 
-    private void setTextCounter(TextView textCounter, int counter) {
-        textCounter.setText(String.format(Locale.getDefault(), "%d", counter));
-    }
 
     public void processOnClick(View v) {
+
+
         final int id = v.getId();
         switch (id) {
             case R.id.digit_0:
@@ -93,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 clearData();
 
                 break;
+
             }
         }
     }
@@ -128,5 +143,8 @@ public class MainActivity extends AppCompatActivity {
         mCalculationData.secondArg = null;
         mCalculationData.operation = null;
     }
+
+
+
 }
 

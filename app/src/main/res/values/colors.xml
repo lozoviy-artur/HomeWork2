@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#ffff5722</color><!-- deep orange 500 -->
     <color name="digit_color_dark_mode">#434141</color>
+    <color name="green">#375712</color>
 </resources>

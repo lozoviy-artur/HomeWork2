@@ -17,4 +17,7 @@
     <string name="minus">-</string>
     <string name="equal">=</string>
     <string name="clear">Clear</string>
+    <string name="SwitchThemeBtn">Switch Theme</string>
+    <string name="themenight">ThemeNight</string>
+    <string name="themeday">Theme Day</string>
 </resources>
