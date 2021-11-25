@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityThemes">
+
+<TableRow>
+<TextView
+    android:textSize="30dp"
+    android:text="Select Theme mode"
+    android:textColor="@color/green"
+    />
+</TableRow>
+
+    <TableRow>
+<RadioGroup>
+
+    <RadioButton
+        android:id="@+id/night"
+        android:checked="true"
+        android:text="Night"
+        android:layout_width="100dp"
+        android:layout_height="20dp"/>
+    <RadioButton
+
+        android:id="@+id/day"
+        android:text="Day"
+        android:layout_width="100dp"
+        android:layout_height="20dp"/>
+</RadioGroup>
+    </TableRow>
+
+</TableLayout>

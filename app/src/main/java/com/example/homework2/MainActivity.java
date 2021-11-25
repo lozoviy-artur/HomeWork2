@@ -1,8 +1,13 @@
 package com.example.homework2;
 
+import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Button;
 import android.view.View;
@@ -10,13 +15,19 @@ import android.view.View;
 import java.util.Locale;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity<themeNight> extends AppCompatActivity implements View.OnClickListener {
+
+
+
 
     private CalculationData mCalculationData = new CalculationData();
     private Numbers mCounters;
 
     private TextView mInputField;  // пользовательский элемент 1-го счетчика
     private TextView textCounter1;  // пользовательский элемент 2-го счетчика
+    Button switchTheme; // Switch theme button
+    Button themeNight;
+    Button themeDay;
 
 
 
@@ -24,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         mCounters = new Numbers();
         initView();
 
@@ -34,18 +46,24 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         // Получить пользовательские элементы по идентификатору
         mInputField = findViewById(R.id.calcField);
+        switchTheme = (Button) findViewById(R.id.switchTheme);
+        themeNight = (RadioButton) findViewById(R.id.night);
+        themeDay = (RadioButton) findViewById(R.id.day);
     }
 
-    private void initButton2ClickListener() {
-        Button button0 = findViewById(R.id.digit_0);
-        button0.setOnClickListener(new View.OnClickListener() {
+/*    private void initButton2ClickListener() {
+        Button radioBtn = findViewById(R.id.night);
+
+        radioBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mCounters.incrementCounter0();
+                setTheme(R.style.Base_V22_Theme_AppCompat_Light);
                 setTextCounter(mInputField, mCounters.getCounter0());
             }
         });
-    }
+    }*/
+
+
 
     private void setTextCounter(TextView textCounter, int counter) {
         textCounter.setText(String.format(Locale.getDefault(), "%d", counter));
@@ -114,6 +132,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(this,ActivityThemes.class);
+        startActivity(intent);
+        Intent intent1 = new Intent(String.valueOf(themeDay));
+        setTheme(R.style.Theme_AppCompat_DayNight);
+
+
+/*        Intent intent1 = new Intent(this, ActivityThemes.class);
+        setTheme(
+        startActivity(intent1);*/
     }
 
     private class CalculationData{
