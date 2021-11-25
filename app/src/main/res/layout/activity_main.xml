@@ -6,14 +6,18 @@
     android:layout_height="match_parent"
     android:background="@drawable/just_picture"
 
-
     tools:context=".MainActivity">
 
 
     <include
+        android:id="@+id/include"
         layout="@layout/table_layout_calculator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp" />
+
+
 
 
 

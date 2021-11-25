@@ -6,6 +6,7 @@
     android:gravity="center|bottom">
 
 
+
     <EditText
         android:id="@+id/calcField"
         android:inputType="number"
@@ -15,6 +16,26 @@
         android:background="@color/white"
         android:gravity="top">
         ></EditText>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|right">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/switchTheme"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            android:textSize="@dimen/text_size"
+            app:cornerRadius="@dimen/buttonCorner"
+            android:text="@string/theme" />
+
+
+    </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
@@ -35,6 +56,7 @@
 
 
     </TableRow>
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -190,6 +212,7 @@
             android:layout_width="100dp"
             android:layout_margin="@dimen/digit_margin"
             android:onClick="processOnClick"
+            android:backgroundTint="@color/orange"
             android:text="@string/comma"
             android:textSize="@dimen/text_size"
             app:cornerRadius="@dimen/buttonCorner"
